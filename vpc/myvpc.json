@@ -43,5 +43,29 @@
           "InternetGatewayId" : { "Ref" : "InternetGateway" }
         }
      },
+
+     "PublicSubnet" : {
+       "Type" : "AWS::EC2::Subnet",
+       "Properties" : {
+         "VpcId" : { "Ref" : "VPC" },
+         "CidrBlock" : "10.0.1.0/24",
+         "AvailabilityZone" : "us-east-1a",
+         "MapPublicIpOnLaunch" : "true",
+         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
+         "Tags" : [ {"Key" : "Name", "Value" : "10.0.1.0/24 us-east-1a" } ]
+       }
+     },
+
+     "PrivateSubnet" : {
+       "Type" : "AWS::EC2::Subnet",
+       "Properties" : {
+         "VpcId" : { "Ref" : "VPC" },
+         "CidrBlock" : "10.0.2.0/24",
+         "AvailabilityZone" : "us-east-1c",
+         "MapPublicIpOnLaunch" : "false",
+         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
+         "Tags" : [ {"Key" : "Name", "Value" : "10.0.2.0/24 us-east-1c" } ]
+       }
+     },     
 }
 }
