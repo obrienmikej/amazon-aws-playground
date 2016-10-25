@@ -16,6 +16,7 @@
          "Tags" : [ {"Key" : "Name", "Value" : "myvpc"} ]
        }
      },
+
      "VpcFlowLog" : {
        "Type" : "AWS::EC2::FlowLog",
        "Properties" : {
@@ -24,6 +25,14 @@
          "ResourceId" : { "Ref" : "VPC" },
          "ResourceType" : "VPC",
          "TrafficType" : "ALL"
+       }
+     },
+
+     "InternetGateway" : {
+       "Type" : "AWS::EC2::InternetGateway",
+       "Properties" : {
+         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
+         "Tags" : [ {"Key" : "Name", "Value" : "myigw"} ]
        }
      },
 }
