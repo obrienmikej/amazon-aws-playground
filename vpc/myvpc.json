@@ -16,5 +16,15 @@
          "Tags" : [ {"Key" : "Name", "Value" : "myvpc"} ]
        }
      },
+     "VpcFlowLog" : {
+       "Type" : "AWS::EC2::FlowLog",
+       "Properties" : {
+         "DeliverLogsPermissionArn" : "arn:aws:iam::144363914423:role/flowlogsRole",
+         "LogGroupName" : "CloudTrail/DefaultLogGroup",
+         "ResourceId" : { "Ref" : "VPC" },
+         "ResourceType" : "VPC",
+         "TrafficType" : "ALL"
+       }
+     },
 }
-}     
+}
