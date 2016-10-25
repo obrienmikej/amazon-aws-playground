@@ -1,1 +1,1 @@
-# amazon-aws
+Playground for preparing for AWS certification.
