@@ -8,8 +8,8 @@ Resources:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
-      EnableDnsSupport: 'false'
-      EnableDnsHostnames: 'false'
+      EnableDnsSupport: "false"
+      EnableDnsHostnames: "false"
       InstanceTenancy: default
       Tags:
         -
@@ -45,7 +45,7 @@ Resources:
       VpcId: { "Ref" : "VPC" }
       CidrBlock: 10.0.1.0/24
       AvailabilityZone: us-east-1a
-      MapPublicIpOnLaunch: 'true'
+      MapPublicIpOnLaunch: "true"
       Tags:
         -
           Key: Name
@@ -57,7 +57,7 @@ Resources:
       VpcId: { "Ref" : "VPC" }
       CidrBlock: 10.0.2.0/24
       AvailabilityZone: us-east-1c
-      MapPublicIpOnLaunch: 'false'
+      MapPublicIpOnLaunch: "false"
       Tags:
       -
         Key: Name
