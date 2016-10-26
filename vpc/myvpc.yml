@@ -62,3 +62,26 @@ Resources:
       -
         Key: Name
         Value: 10.0.2.0/24 us-east-1c
+
+  RouteTableIgw:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: { "Ref" : "VPC" },
+      Tags:
+      -
+         Key: Name
+         Value: myigw
+
+  IgwRoute:
+    Type: AWS::EC2::Route
+    DependsOn: InternetGateway
+    Properties:
+      RouteTableId: { "Ref" : "RouteTableIgw" }
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: { "Ref" : "InternetGateway" }
+
+  PublicSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: { "Ref" : "PublicSubnet" }
+      RouteTableId: { "Ref" : "RouteTableIgw" }
