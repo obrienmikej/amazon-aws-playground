@@ -1,0 +1,26 @@
+---
+Description: Create EC2 infrastructure to test compute concepts.
+
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http to client host
+      VpcId: vpc-b79287d0
+      Tags:
+        -
+          Key: Name
+          Value: mjo-sg      
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
