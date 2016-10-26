@@ -12,7 +12,6 @@
          "EnableDnsSupport" : "false",
          "EnableDnsHostnames" : "false",
          "InstanceTenancy" : "default",
-         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
          "Tags" : [ {"Key" : "Name", "Value" : "myvpc"} ]
        }
      },
@@ -31,7 +30,6 @@
      "InternetGateway" : {
        "Type" : "AWS::EC2::InternetGateway",
        "Properties" : {
-         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
          "Tags" : [ {"Key" : "Name", "Value" : "myigw"} ]
        }
      },
@@ -51,7 +49,6 @@
          "CidrBlock" : "10.0.1.0/24",
          "AvailabilityZone" : "us-east-1a",
          "MapPublicIpOnLaunch" : "true",
-         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
          "Tags" : [ {"Key" : "Name", "Value" : "10.0.1.0/24 us-east-1a" } ]
        }
      },
@@ -63,7 +60,6 @@
          "CidrBlock" : "10.0.2.0/24",
          "AvailabilityZone" : "us-east-1c",
          "MapPublicIpOnLaunch" : "false",
-         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
          "Tags" : [ {"Key" : "Name", "Value" : "10.0.2.0/24 us-east-1c" } ]
        }
      },
@@ -72,7 +68,6 @@
        "Type" : "AWS::EC2::RouteTable",
        "Properties" : {
          "VpcId" : { "Ref" : "VPC" },
-         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
          "Tags" : [ {"Key" : "Name", "Value" : "myigw" } ]
        }
      },
@@ -93,6 +88,6 @@
            "SubnetId" : { "Ref" : "PublicSubnet" },
            "RouteTableId" : { "Ref" : "RouteTableIgw" }
          }
-      },          
+      },
 }
 }
