@@ -12,8 +12,9 @@ Resources:
       EnableDnsHostnames: 'false'
       InstanceTenancy: default
       Tags:
-      - Key: Name
-        Value: mobvpc
+        -
+          Key: Name
+          Value: mobvpc
 
   VpcFlowLog:
     Type: AWS::EC2::FlowLog
@@ -28,11 +29,36 @@ Resources:
        Type: AWS::EC2::InternetGateway
        Properties:
          Tags:
-         - Key: Name
-           Value: myigw
+           -
+             Key: Name
+             Value: myigw
 
   AttachGateway:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       VpcId: { "Ref" : "VPC" }
       InternetGatewayId: { "Ref" : "InternetGateway" }
+
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: { "Ref" : "VPC" }
+      CidrBlock: 10.0.1.0/24
+      AvailabilityZone: us-east-1a
+      MapPublicIpOnLaunch: 'true'
+      Tags:
+        -
+          Key: Name
+          Value: 10.0.1.0/24 us-east-1a
+
+  PrivateSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: { "Ref" : "VPC" }
+      CidrBlock: 10.0.2.0/24
+      AvailabilityZone: us-east-1c
+      MapPublicIpOnLaunch: 'false'
+      Tags:
+      -
+        Key: Name
+        Value: 10.0.2.0/24 us-east-1c
