@@ -1,3 +1,3 @@
 #!/bin/bash
 
-aws dynamodb batch-write-item --request-items file://product_catalog.json
+aws dynamodb batch-write-item --request-items file://data_product_catalog.json
