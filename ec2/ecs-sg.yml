@@ -13,7 +13,7 @@ Resources:
       Tags:
         -
           Key: Name
-          Value: mjo-sg      
+          Value: mjo-sg
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: '80'
@@ -23,4 +23,19 @@ Resources:
       - IpProtocol: tcp
         FromPort: '80'
         ToPort: '80'
+        CidrIp: 0.0.0.0/0
+
+  RDSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: My RDS SecurityGroup
+      VpcId: vpc-b79287d0
+      Tags:
+        -
+          Key: Name
+          Value: mjo-rds-sg
+      SecurityGroupIngress:
+      - IpProtocol: ssh
+        FromPort: '22'
+        ToPort: '22'
         CidrIp: 0.0.0.0/0

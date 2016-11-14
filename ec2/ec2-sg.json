@@ -5,30 +5,14 @@
 
    "Resources" : {
 
-        "SGBase": {
+        "RdsSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "Base Security Group",
-                "Tags" : [ {"Key" : "Name", "Value" : "mob base sg"} ],
-                "SecurityGroupIngress": [
-                    {
-                        "IpProtocol": "tcp",
-                        "CidrIp": "0.0.0.0/0",
-                        "FromPort": "22",
-                        "ToPort": "22"
-                    }
-                ]
-            }
-        },
-        "SGBaseIngress": {
-            "Type": "AWS::EC2::SecurityGroupIngress",
-            "Properties": {
-                "GroupName": { "Ref": "SGBase" },
-                "IpProtocol": "tcp",
-                "FromPort": "80",
-                "ToPort": "80",
-                "SourceSecurityGroupName": { "Ref": "SGBase" }
-            }
-        }
-    }
+                "GroupDescription": "RDS Security Group",
+                "Tags" : [ {"Key" : "Name", "Value" : "RDS SG"} ],
+                "VpcId" : "vpc-b06c79d7",
+                "ingress": { "source-ips": [{ "IpProtocol": "tcp", "FromPort": 80, "ToPort": 80, "IpRanges": [{"CidrIp": "0.0.0.0/0"}],
+             }
+
+}
 }
