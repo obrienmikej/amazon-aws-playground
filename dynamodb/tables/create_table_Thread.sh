@@ -1,1 +1,3 @@
-aws dynamodb create-table --table-name Thread --attribute-definitions AttributeName=Name,AttributeType=S --key-schema AttributeName=Name,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+#!/bin/bash
+
+aws dynamodb create-table --attribute-definitions AttributeName=ForumName,AttributeType=S AttributeName=Subject,AttributeType=S --table-name Thread --key-schema AttributeName=ForumName,KeyType=HASH AttributeName=Subject,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
