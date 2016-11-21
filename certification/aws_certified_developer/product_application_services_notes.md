@@ -11,7 +11,6 @@ Messages can be in any order
 Need to implement app level tracking
 Messages can be 256kb
 Billed in 64kb chunks (4 chunks = 256)
-Product = Application Service
 
 Visibility/timeout default = 30 seconds
 Visibility/timeout max = 12 hours
@@ -80,7 +79,6 @@ Easily coordinate work across distributed applications
 Task orientated API
 Task only assigned once and never duplicated
 Tracks all tasks and events
-Product = Application Service
 
 Max workflow = 1 year
 
@@ -121,7 +119,6 @@ publish - subscribe model, SNS notifies the message, and hence push based approa
 Inexpensive pay as you go
 CloudWatch or Autoscaling triggers SNS
 SNS messages are stored redundantly to multiple AZs
-Product = Application Service
 
 Publishers
 communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel.

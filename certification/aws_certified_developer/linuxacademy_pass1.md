@@ -1,32 +1,3 @@
-Trial
-Upgrade Now!
- knoby129  Support  Latest Updates  1
-
-Dashboard
-
-Courses
-
-Quick Training
-
-Note Cards
-
-Labs
-
-Learning Paths
-
-Community
-
-Servers
-Practice Mode: Score will not be recorded
-Courses
-AWS Certified Developer - Associate Level
-QUIZ RESULTS: CONCEPT REVIEW EXAM
-
-FAIL
-
-
-IMPORTANT: TO INCREASE YOUR CHANCES OF SUCCESS, DO NOT ONLY REVIEW THE CORRECT ANSWERS, BUT GO BACK TO THE COURSE MATERIALS TO ENSURE A COMPLETE UNDERSTANDING OF THE TOPIC.
-
 1) Which of the following statements about SQS is true?
 Correct
 
@@ -1053,4 +1024,4 @@ Use a third party load-testing service to send requests from globally distribute
 Explanation
 "If you do not ensure that DNS is re-resolved or use multiple test clients to simulate increased load, the test may continue to hit a single IP address when Elastic Load Balancing has actually allocated many more IP addresses. Because your end users will not all be resolving to that single IP address, your test will not be a realistic sampling of real-world behavior.” http://aws.amazon.com/articles/1636185810492479
 
-Retake Quiz 
+Retake Quiz

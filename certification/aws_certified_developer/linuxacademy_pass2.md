@@ -1,29 +1,3 @@
-Trial
-Upgrade Now!
- knoby129  Support  Latest Updates  1
-
-Dashboard
-
-Courses
-
-Quick Training
-
-Note Cards
-
-Labs
-
-Learning Paths
-
-Community
-
-Servers
-Practice Mode: Score will not be recorded
-Courses
-AWS Certified Developer - Associate Level
-QUIZ RESULTS: CONCEPT REVIEW EXAM
-
-PASS
-85% CORRECT
 1) What is the minimum size of an S3 object?
 Correct
 
@@ -1050,4 +1024,4 @@ Explanation: Buckets in all regions except US-East-1 have a maximum length of 63
 Further Reading
 http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
 
-Retake Quiz 
+Retake Quiz
