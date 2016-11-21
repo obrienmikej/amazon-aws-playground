@@ -46,6 +46,7 @@ fast - flexible No sql database - single digit ms latency, fully managed, suppor
 (I) item (row)
 (A) attribute (key - value)
 
+Limits:
 tables per region = 256 (initial limit)
 local secondary indexes per table = 5
 global secondary indexes per table = 5
@@ -54,7 +55,7 @@ partition key & sort key length
 -max = 2048 bytes
 
 There is no practical limit on the number of distinct partition key values, for tables or for secondary indexes.
-400kb = lenth of string or binary
+400kb = length of string or binary
 
 Eventual Consistent Reads vs Strongly Consistent Reads
 

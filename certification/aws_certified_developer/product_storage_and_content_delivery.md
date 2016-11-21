@@ -14,13 +14,25 @@ Important S3 Limits:
 -Unlimited Number of Objects in S3 or Archives in Glacier
 -100 S3 buckets per account per region [Contact AWS to increase limit]
 -1000 Glacier Vaults per account per region
--3 to 63 characters in bucket names. alpha numeric. - and . is allowed. _ is not. Can start with AlphaNumeric. Cannot have --, .- etc adjacent.
+
 -0 byte to  5 TB size of Objects in S3.
 -1 byte to 40 TB size of Archives in Glacier.
 -5 GB is Max size in one PUT in S3.
 -100 MB or more Recommended (5 GB or more Mandatory) for MultiPart Upload. 5MB - 5 TB
 -1000 keys limit for Multi Object Delete
 -100 Max no of CORS rules allowed
+
+Rules for buckets
+3 to 63 characters
+CAN BE
+-lowercase letters, numbers, and hyphens
+-be separated by .
+
+CAN'T
+-contain an ip address
+-start with .
+-start with -
+-end with a .
 
 Consistency
 -Read after write consistency for PUTS of new objects
@@ -53,6 +65,8 @@ When new bucket created, DEFAULT behavior = private
 Controlled by
 -Bucket policy
 -Access control list
+
+Bucket ownership is not transferable; however, if a bucket is empty, you can delete it. After a bucket is deleted, the name becomes available to reuse, but the name might not be available for you to reuse for various reasons.
 
 Encryption | in transit
 -ssl/tls i.e via https

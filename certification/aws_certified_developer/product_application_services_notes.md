@@ -123,23 +123,19 @@ CloudWatch or Autoscaling triggers SNS
 SNS messages are stored redundantly to multiple AZs
 Product = Application Service
 
-SNS can notify
--Email
--Text / SMS
--SQS or any HTTP end point.
-
 Publishers
 communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel.
 
 Subscribers
 consume or receive the message or notification over one of the supported protocols
 
-Protocols:
+SNS can notify the following Protocols:
 -HTTP/HTTPS
 -EMAIL
+-EMAIL-JSON
 -SMS
 -SQS
--Lambda
+-Application
 
 SNS Dataformat - JSON (Subject, Message, TopicArn, MessageId, unsubscribeURL etc..)
 Message

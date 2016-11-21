@@ -41,3 +41,6 @@ EC2 APIs
 -CreateSnapshot		  : Creates a snapshot from an EBS Volume and stores it in S3
 -CopySnapshot			  : Copies a point-in-time Snapshot and stores it in S3. Can copy to S3 in the same region or a different region
 -DescribeSnapshots	: Describes one or more EBS snapshots available to you
+
+You want to find out what AMIs are available for you to use in a given region. Which API call is most appropriate?
+DescribeImages
