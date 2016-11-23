@@ -30,6 +30,7 @@ CAN BE
 
 CAN'T
 -contain an ip address
+-contain download in the name 
 -start with .
 -start with -
 -end with a .
