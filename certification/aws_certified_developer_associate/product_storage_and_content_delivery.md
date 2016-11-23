@@ -3,24 +3,20 @@ Simple Storage Service (S3)
 ***************************
 
 Object based storage
+Unlimited Storage
+Files stored in alphabetical order
+Unlimited Number of Objects in S3 or Archives in Glacier
+
 Files 0 byte to 5TB
 Max buckets per account = 100
-Unlimited Storage
-Largest single put object = 5GB
-Files stored in alphabetical order
-Max # of buckets per AWS account = 100
-
-Important S3 Limits:
--Unlimited Number of Objects in S3 or Archives in Glacier
--100 S3 buckets per account per region [Contact AWS to increase limit]
--1000 Glacier Vaults per account per region
+Largest single put object = 5GB (recommend splitting to 100MB chunks)
+Glacier Vaults per account per region = 1000
 
 -0 byte to  5 TB size of Objects in S3.
 -1 byte to 40 TB size of Archives in Glacier.
--5 GB is Max size in one PUT in S3.
--100 MB or more Recommended (5 GB or more Mandatory) for MultiPart Upload. 5MB - 5 TB
--1000 keys limit for Multi Object Delete
--100 Max no of CORS rules allowed
+
+keys limit for Multi Object Delete = 1000 
+Max no of CORS rules allowed = 100
 
 Rules for buckets
 3 to 63 characters
@@ -30,7 +26,7 @@ CAN BE
 
 CAN'T
 -contain an ip address
--contain download in the name 
+-contain download in the name
 -start with .
 -start with -
 -end with a .
