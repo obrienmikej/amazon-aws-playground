@@ -54,19 +54,19 @@ Advanced Queue Management
 -ListDeadLetterSourceQueues: List the queues attached to a dead letter queue
 
 SQS API:
--ReceiveMessage			          : Receive one or more messages in Queue (upto 10)
--DeleteMesage				          : Delete a message from queue
+-ReceiveMessage			          : Receive one or more messages in Queue (up to 10)
+-DeleteMessage				          : Delete a message from queue
 -SendMessage				          : Send a message to a queue
 -ChangeMessageVisibility	    : Change the message visibility timeout
--DeleteMessageBatch		        : Delete a set of messages (upto 10)
--SendMessageBatch			        : Send a batch of messages (upto 10). Total Size of all messages cannot exceed 256 KB.
--ChangeMessageVisibilityBatch : Change a batch of messages visibility (upto 10)
+-DeleteMessageBatch		        : Delete a set of messages (up to 10)
+-SendMessageBatch			        : Send a batch of messages (up to 10). Total Size of all messages cannot exceed 256 KB.
+-ChangeMessageVisibilityBatch : Change a batch of messages visibility (up to 10)
 -CreateQueue
 -DeleteQueue
 -ListQueues
 -ListDeadLetterSourceQueues   : List all Dead Letter Source Queues
 -PurgeQueue				            : Delete all messages in a Queue
--SetQueueAttributes	          : MessageRetentionPeriod(Upto 14 days),MaximumMessageSize(Upto 256 KB),ReceiveMessageWaitTimeSeconds(Upto 20 sec) DelaySeconds(upto      15min)
+-SetQueueAttributes	          : MessageRetentionPeriod(Up to 14 days),MaximumMessageSize(upto 256 KB),ReceiveMessageWaitTimeSeconds(up to 20 sec) DelaySeconds(up to 15 min)
 -GetQueueAttributes
 
 *****************************
@@ -86,10 +86,9 @@ Sample
 Verify order, change credit card, ship order, record done
 
 Domain = think collection of everything
--Workflow
--Activity types
--Workflow execution
-Think collection of everything
+(W) Workflow
+(A) Activity types
+(W) Workflow execution
 
 (W) Worker
 -Get tasks, process tasks, return results
@@ -108,62 +107,6 @@ Supported SDK's
 -php
 -python
 -ruby
-
-*********************************
-Simple Notification Service (SNS)
-*********************************
-
-web service that coordinates and manages the delivery or sending of messages to subscribing endpoints or clients
-
-publish - subscribe model, SNS notifies the message, and hence push based approach
-Inexpensive pay as you go
-CloudWatch or Autoscaling triggers SNS
-SNS messages are stored redundantly to multiple AZs
-
-Publishers
-communicate asynchronously with subscribers by producing and sending a message to a topic, which is a logical access point and communication channel.
-
-Subscribers
-consume or receive the message or notification over one of the supported protocols
-
-SNS can notify the following Protocols:
--HTTP/HTTPS
--EMAIL
--EMAIL-JSON
--SMS
--SQS
--Application
-
-SNS Dataformat - JSON (Subject, Message, TopicArn, MessageId, unsubscribeURL etc..)
-Message
-MessageId
-Signature
-SignatureVersion
-SigningCertURL
-Subject
-Timestamp
-TopicArn
-Type
-UnsubscribeURL
-
-
-HTTP/HTTPS Headers
-x-amz-sns-message-type
-x-amz-sns-message-id
-x-amz-sns-topic-arn
-x-amz-sns-subscription-arn
-
-SNS API:
--Subscribe
--Unsubscribe
--Publish
--CreateTopic
--DeleteTopic
--ListTopics
--ListSubscriptions
--ListSubscriptionsByTopic
--SetTopicAttributes
--GetTopicAttributes
 
 **************************
 Simple Email Service (SES)

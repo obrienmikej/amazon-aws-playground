@@ -46,7 +46,6 @@ fast - flexible No sql database - single digit ms latency, fully managed, suppor
 (I) item (row)
 (A) attribute (key - value)
 
-Limits:
 tables per region = 256 (initial limit)
 local secondary indexes per table = 5
 global secondary indexes per table = 5
