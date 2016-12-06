@@ -1,0 +1,12 @@
+CloudWatch = RDS by Metrics
+RDS = RDS by events
+
+Key RDS Metrics
+-DatabaseConnections
+-DiskQueueDepth
+-FreeStorageSpace
+-ReplicaLag (seconds)
+-ReadIOPS
+-WriteIOPS
+-ReadLatency
+-WriteLatency
