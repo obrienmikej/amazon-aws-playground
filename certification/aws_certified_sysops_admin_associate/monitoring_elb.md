@@ -5,16 +5,14 @@ only reports when requests/traffic are flowing through ELB
 Key ELB Metrics
 ***************
 HealthyHostCount
--Number of healthy instances in each AZ
-
 UnHealthyHostCount
--Number of unhealthy instances in each AZ
+-The number of healthy and unhealthy instances registered with your load balancer. A newly registered instance is considered healthy after it passes the first health check. An instance is considered unhealthy after it exceeds the unhealthy threshold configured for health checks. An unhealthy instance is considered healthy again after it meets the healthy threshold configured for health checks. If cross-zone load balancing is enabled, the number of healthy instances for the LoadBalancerName dimension is calculated across all Availability Zones.
 
 RequestCount
--Number of completed requests that were received and routed to instances
+-The number of requests completed or connections made during the specified interval (1 or 5 minutes)
 
 Latency
--Time elapsed in seconds after the request leaves the ELB until the response is received
+-	[HTTP listener] The time elapsed, in seconds, after the request leaves the load balancer until the headers of the response are received
 
 HTTPCode_ELB_4xx
 HTTPCode_ELB_5xx
@@ -30,7 +28,7 @@ BackendConnectionErrors
 know these good
 ***************
 SurgeQueueLength
--Number of requests that are pending submission to a registered instance
+-The total number of requests that are pending routing. The load balancer queues a request if it is unable to establish a connection with a healthy instance in order to route the request. The maximum size of the queue is 1,024. Additional requests are rejected when the queue is full. For more information, see SpilloverCount.
 
 SpilloverCount
--Number of requests that were rejected due to the queue being full
+-	The total number of requests that were rejected because the surge queue is full

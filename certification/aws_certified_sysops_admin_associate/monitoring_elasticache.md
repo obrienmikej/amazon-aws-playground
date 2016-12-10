@@ -26,8 +26,10 @@ Swap Usage
 Memcached
 -should be around 0 most of the time
 -should not exceed 50mb
-memcached_connections_overhead defines the amount of memory to be reserved for memcached connections and other overheard
 -if > 50mb increase memcached_connections_overhead
+
+memcached_connections_overhead
+-defines the amount of memory to be reserved for memcached connections and other overheard
 
 Reddis
 -no SwapUsage metric
@@ -36,6 +38,7 @@ Reddis
 *********
 Evictions
 *********
+think like tenants in an apartment building
 An eviction occurs when a new item is added and an old item must be removed due to lack of free space in the system
 
 Memcached
@@ -55,7 +58,7 @@ Concurrent connections
 **********************
 -no recommended setting
 -set threshold based on application
--set alarm on concurrent connections for elasticache 
+-set alarm on concurrent connections for elasticache
 -if large or sustained spike in number of concurrent connections
 1.large traffic spike
 OR
