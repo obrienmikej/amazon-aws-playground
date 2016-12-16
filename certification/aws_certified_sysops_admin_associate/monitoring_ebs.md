@@ -9,7 +9,7 @@ General Purpose (SSD)
 -dev/test environments
 -volume size = 1 GiB - 16 TiB
 -max throughput = 160 MIB/s
--3 IOPS per GB *see i/o credits
+-3 IOPS per GB see i/o credits
 
 Provisioned IOPS (SSD)
 -critical business apps that require sustained IOPS
@@ -25,7 +25,6 @@ Magnetic
 -volume size = 1 GiB - 1 TiB
 -max throughput = 40-90 MIB/s
 -performance = averages 100 IOPS
-
 
 I/O Credits
 when volume requires more than baseline, use I/O credits in balance to burst (to max of 3,000 IOPS)

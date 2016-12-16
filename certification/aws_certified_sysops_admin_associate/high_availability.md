@@ -83,7 +83,7 @@ PostgreSQL 9.3.5
 
 Create Read Replica
 multi az NOT enabled : snapshot primary db, IO hit
-multi az enabled    :snapshot seconday az
+multi az enabled     :snapshot secondary az
 
 Exam Tips
 MySQL
@@ -107,3 +107,8 @@ Instances and auto scaling groups - why instances might not launch
 -key pair doe not exist
 -security group does not exist
 -problem with auto scaling group
+-instance type not supported in az
+-az is no longer supported
+-invalid EBS device mapping
+-autoscaling service is not enabled in account
+-attempt to attach EBS block device to instance store ami

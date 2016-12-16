@@ -12,7 +12,7 @@ RequestCount
 -The number of requests completed or connections made during the specified interval (1 or 5 minutes)
 
 Latency
--	[HTTP listener] The time elapsed, in seconds, after the request leaves the load balancer until the headers of the response are received
+-[HTTP listener] The time elapsed, in seconds, after the request leaves the load balancer until the headers of the response are received
 
 HTTPCode_ELB_4xx
 HTTPCode_ELB_5xx
@@ -31,4 +31,4 @@ SurgeQueueLength
 -The total number of requests that are pending routing. The load balancer queues a request if it is unable to establish a connection with a healthy instance in order to route the request. The maximum size of the queue is 1,024. Additional requests are rejected when the queue is full. For more information, see SpilloverCount.
 
 SpilloverCount
--	The total number of requests that were rejected because the surge queue is full
+-The total number of requests that were rejected because the surge queue is full
