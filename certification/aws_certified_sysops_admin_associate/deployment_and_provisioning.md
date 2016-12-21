@@ -7,9 +7,9 @@ Services with root/admin access to O/S
 ************************************
 Elastic Load Balancer Configurations
 ************************************
--Can across different AZ's with same region
--Can NOT with different VPC's
--Can NOT with different regions
+-Can     :configure across different AZ's in same region
+-Can NOT :configure with different VPC's
+-Can NOT :configure with different regions
 
 TWO different types of ELB's
 1.External ELB with external DNS names
@@ -56,7 +56,9 @@ Sticky sessions
 -not enabled by default
 
 TWO types
+****************
 1.Duration based
+****************
 edit stickiness = enable load balancer generated cookie stickiness
 -most common
 -elb creates the session cookie
@@ -65,7 +67,9 @@ edit stickiness = enable load balancer generated cookie stickiness
 instance failure = elb stops routing to that instance
 -time set = elb
 
+******************************
 2.Application controlled based
+******************************
 edit stickiness = enable application generated cookie stickiness
 -elb uses a special cookie to associate the session with the original server that handled request
 -follows the lifetime of app generated cookie

@@ -1,10 +1,10 @@
 Services that have automated backups
-1.RDS
-2.elasticache (redis only)
-3.redshift
+-RDS
+-elasticache (redis only)
+-redshift
 
 Services that don't have automated backups
-1.ec2
+-ec2
 -can take snapshots of EC2, but manual process
 
 ************
@@ -12,10 +12,10 @@ RDS Backups
 ************
 -MySQL, need InnoDB
 -performance hit if multi-az not enabled
--if instance deleted, all automated backups deleted
+-automated backups deleted if instance deleted
 -manual DB snapshots are not deleted
+-during restore, can change engine type
 -stored on S3
--during restore, can change engine type (standard to enterprise)
 
 *******************
 Elasticache backups

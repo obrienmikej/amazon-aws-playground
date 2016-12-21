@@ -103,12 +103,15 @@ Bastion Host
 ************
 high availability = multiple instances, route53, elastic IP's, separate subnets
 
-Instances and auto scaling groups - why instances might not launch
--key pair doe not exist
--security group does not exist
--problem with auto scaling group
--instance type not supported in az
--az is no longer supported
--invalid EBS device mapping
--autoscaling service is not enabled in account
--attempt to attach EBS block device to instance store ami
+*********************************
+Instances and auto scaling groups
+*********************************
+why instances might not launch
+-auto scaling group    : config problem
+-auto scaling service  : not enabled in account
+-az                    : not supported
+-drive                 : invalid EBS device mapping
+-drive                 : attempt to attach EBS block device to instance store ami
+-instance type         : not supported in az
+-key pair              : does not exist
+-security group        : does not exist

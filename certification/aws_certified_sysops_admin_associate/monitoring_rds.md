@@ -16,16 +16,10 @@ The amount of available storage space
 ReplicaLag (seconds)
 The amount of time a Read Replica DB instance lags behind the source DB instance. Applies to MySQL, MariaDB, and PostgreSQL Read Replicas
 
-ReadIOPS
+ReadIOPS, WriteIOPS
 The average number of disk I/O operations per second
 
-WriteIOPS
-The average number of disk I/O operations per second.
-
-ReadLatency
-The average amount of time taken per disk I/O operation
-
-WriteLatency
+ReadLatency, WriteLatency
 The average amount of time taken per disk I/O operation
 
 *************
