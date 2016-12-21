@@ -7,12 +7,16 @@ recovery point objective (RPO)
 –RPO is not determined by the existent backup regime. Secondly, when any level of preparation of off-site data is required, rather than at the time the backups are offsited, the period during which data is lost very often starts near the time of the beginning of the work to prepare backups which are eventually offsited.
 
 FOUR DR Scenarios
+1.Backup & Restore
+2.Pilot Light
+3.Warm Standby
+4.Multi Site 
 
-******************
-Backup and Restore
-******************
+***********************
+ONE: Backup and Restore
+***********************
 -DR scenario where data backed up to tape and stored off site.  Use tapes to restore service
--S3 ideal destination for backup when need quick acccess
+-S3 ideal destination for backup when need quick access
 -could use AWS import/export to transfer large data sets
 -Glacier could be used for longer term storage where retrieval times are longer
 
@@ -29,9 +33,9 @@ Fail Back
 4.repoints users to the primary site
 5.unfreeze the changes
 
-***********
-Pilot Light
-***********
+****************
+TWO: Pilot Light
+****************
 -DR scenario where minimal version of environment is always running
 -able to rapidly provision full scale production environment when needed
 -include critical core parts of system (think RDS, db server, active directory)
@@ -50,10 +54,10 @@ Fail Back
 3.repoint users to the primary site
 4.unfreeze the changes
 
-************
-Warm Standby
-************
--DR scenario whee scaled down version of a fully functional environment is always running
+*******************
+THREE: Warm Standby
+*******************
+-DR scenario where scaled down version of a fully functional environment is always running
 -everything running, but on minimum sized fleet of ec2 instances
 -will no handle full production load, but is fully functional
 -could also be used for non production work (test, internal use)
@@ -84,9 +88,9 @@ Fail Back
 3.repoint users to the primary site
 4.unfreeze the changes
 
-**********
-Multi Site
-**********
+****************
+FOUR: Multi Site
+****************
 -active\active configuration
 -can use route 53 to root traffic to both sites either symmetrically or asymmetrically
 
@@ -110,7 +114,6 @@ Fail Back
 2.freeze data changes to the DR site
 3.repoint users to the primary site
 4.unfreeze the changes
-
 
 Exam TIP:
 -horizontal scaling is preferred over vertical scaling

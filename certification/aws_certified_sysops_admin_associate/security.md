@@ -1,7 +1,6 @@
 ****************************
 Security Token Service (STS)
 ****************************
-
 grants users limited and temporary access to AWS resources
 
 Users can come from 3 sources
@@ -28,7 +27,7 @@ Services like active directory, Facebook, google
 Identity:
 A user of a service
 
-Scenarios
+TWO Scenarios
 
 ONE
 1.develop identity broker with LDAP & AWS STS
@@ -44,7 +43,6 @@ TWO
 ***************
 AWS Credentials
 ***************
-
 Passwords
 String of characters 6-128
 1.AWS root account
@@ -81,7 +79,6 @@ When storage device reaches end of life, AWS procedures include decommissioning 
 ****************
 Network security
 ****************
-
 Can use a IPSC virtual Private Network (VPN) device to provide encrypted tunnel between AWS VPC & private cloud
 
 Network monitoring & protection from AWS
@@ -100,16 +97,16 @@ AWS responsible for protecting global infrastructure
 Comprised of hardware, software, networking & facilities that run AWS services
 
 AWS responsible for security configuration of managed services.  Examples
-DynamoDB
-RDS
-Redshift
-EMR
-Workspace
+-DynamoDB
+-RDS
+-Redshift
+-EMR
+-Workspace
 
-Customer responsible for services under their control.  Customer performs all necessary security configuration and management tasks.  Examples
-EC2
-VPC
-S3
+Customer responsible for security configuration of services under their control.  Customer performs all necessary security configuration and management tasks. -Examples
+-EC2
+-VPC
+-S3
 
 ******************
 Instance Isolation

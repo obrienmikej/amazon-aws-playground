@@ -8,7 +8,7 @@ Services that don't have automated backups
 -can take snapshots of EC2, but manual process
 
 ************
-RDS  Backups
+RDS Backups
 ************
 -MySQL, need InnoDB
 -performance hit if multi-az not enabled

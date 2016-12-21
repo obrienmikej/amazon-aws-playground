@@ -1,7 +1,6 @@
 ****************
 EBS Volume Types
 ****************
-
 General Purpose (SSD)
 -System boot volumes
 -virtual desktops
@@ -53,7 +52,6 @@ if restored volume, read all blocks first
 **********************
 EBS CloudWatch Metrics
 **********************
-
 VolumeReadBytes
 VolumeWriteBytes
 
@@ -76,7 +74,6 @@ VolumeConsumedReadWriteOps
 ********************
 Volume Status Checks
 ********************
-
 OK
 normal = volume performance is as expected
 

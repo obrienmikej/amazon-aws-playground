@@ -1,7 +1,7 @@
 **********
 Elasticity
 **********
--think runner band
+-think rubber band
 -allows you to stretch out & retract infrastructure
 -only pay for what you use
 -used during short periods (hours or days)
@@ -48,7 +48,7 @@ RDS multi AZ failover
 
 MySQL, Oracle, PostgreSQL
 -synchronous physical replication
--sandby
+-standby
 
 SQL Server
 -synchronous logical replication
@@ -83,7 +83,7 @@ PostgreSQL 9.3.5
 
 Create Read Replica
 multi az NOT enabled : snapshot primary db, IO hit
-multi az enabled     :snapshot secondary az
+multi az enabled     : snapshot secondary az
 
 Exam Tips
 MySQL
@@ -101,7 +101,7 @@ Key Cloud Watch metric = Replica Lag
 ************
 Bastion Host
 ************
-high availability = multiple instances, route53, elastic IP's, seperate subnets
+high availability = multiple instances, route53, elastic IP's, separate subnets
 
 Instances and auto scaling groups - why instances might not launch
 -key pair doe not exist

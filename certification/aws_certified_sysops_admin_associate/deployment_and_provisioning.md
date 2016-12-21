@@ -7,10 +7,9 @@ Services with root/admin access to O/S
 ************************************
 Elastic Load Balancer Configurations
 ************************************
-
--Can use ELB to load balance across different AZ's with same region
--Can't with different VPC's
--Can't with different regions
+-Can across different AZ's with same region
+-Can NOT with different VPC's
+-Can NOT with different regions
 
 TWO different types of ELB's
 1.External ELB with external DNS names
@@ -19,7 +18,6 @@ TWO different types of ELB's
 ***************
 ELB healthcheck
 ***************
-
 Ping Protocol
 -The protocol to use to connect with the instance.  
 -Valid values: TCP, HTTP, HTTPS, and SSL
