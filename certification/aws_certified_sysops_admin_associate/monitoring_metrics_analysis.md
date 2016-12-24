@@ -59,7 +59,7 @@ EC2 Status Checks
 System Status Check = physical HOST
 -loss of network connectivity
 -loss of system power
--software or  issue on the physical host
+-software or issue on the physical host
 RESOlVE = stop/start VM (will start VM on new physical host)
 
 Instance Status Check = VM
