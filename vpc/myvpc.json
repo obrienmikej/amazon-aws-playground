@@ -88,6 +88,6 @@
            "SubnetId" : { "Ref" : "PublicSubnet" },
            "RouteTableId" : { "Ref" : "RouteTableIgw" }
          }
-      },
+      }
 }
 }
