@@ -1,4 +1,4 @@
-#Overview
+# Overview
 Playground for preparing for AWS certification.
 
 ## prerequisites
@@ -7,10 +7,8 @@ Playground for preparing for AWS certification.
 
 ## Create VPC with Cloud Formation
 1. run aws cloudformation create-stack --stack-name myvpc --template-body file://myvpc.json
-or
 2. run aws cloudformation create-stack --stack-name myvpc --template-body file://myvpc.yaml
 
 ## Delete CPC with Cloud Formation
 1. run aws cloudformation delete-stack --stack-name myvpc --template-body file://myvpc.json
-or
 2. run aws cloudformation delete-stack --stack-name myvpc --template-body file://myvpc.yaml
