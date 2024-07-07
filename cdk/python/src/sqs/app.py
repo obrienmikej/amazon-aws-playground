@@ -6,7 +6,7 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-class SqsQueueStack(Stack):
+class SimpleQueueServiceStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
@@ -19,6 +19,6 @@ class SqsQueueStack(Stack):
         )
 
 app = cdk.App()
-SqsQueueStack(app, "SqsQueueStack")
+SimpleQueueServiceStack(app, "SimpleQueueServiceStack")
 
 app.synth()
