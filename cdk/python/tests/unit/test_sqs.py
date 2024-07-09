@@ -35,6 +35,10 @@ class TestSqsStack(unittest.TestCase):
     def test_queue_created(self):
         template = assertions.Template.from_stack(self.stack)
 
+        # Check if the SQS Queue resource is present
+        template.resource_count_is("AWS::SQS::Queue", 1)
+
+        # Verify the properties of the SQS Queue
         template.has_resource_properties("AWS::SQS::Queue", {
             "QueueName": "MyQueue",
             "VisibilityTimeout": 30,
