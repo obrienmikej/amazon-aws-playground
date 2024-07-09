@@ -2,21 +2,26 @@ import aws_cdk as cdk
 from aws_cdk import (
     Stack,
     aws_sqs as sqs,
-    Duration
 )
 from constructs import Construct
 
-class SimpleQueueServiceStack(Stack):
-    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
-        super().__init__(scope, construct_id, **kwargs)
+class SqsStack(Stack):
 
-        # Define the SQS queue
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
+        super().__init__(scope, id, **kwargs)
+
+        # Create the SQS queue
         queue = sqs.Queue(
             self, "MyQueue",
-            visibility_timeout=Duration.seconds(300),
-            queue_name="MySimpleQueue"
+            queue_name="MyQueue",
+            visibility_timeout=cdk.Duration.seconds(30),
+            retention_period=cdk.Duration.days(4)
         )
 
-app = cdk.App()
-SimpleQueueServiceStack(app, "SimpleQueueServiceStack")
+class MyApp(cdk.App):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        SqsStack(self, "SqsStack")
+
+app = MyApp()
 app.synth()
