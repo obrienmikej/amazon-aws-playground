@@ -14,12 +14,21 @@ Playground for preparing for AWS certification.
 2. run aws cloudformation delete-stack --stack-name myvpc
 
 # AWS CDK
+
 Plarground for using the AWS CDK with python
 
+## prerequisites
+
+- AWS CLI
+- AWS CDK
+- PIP
+
+## vscode
+
 - Create a virtual environment and activate it to use the repo within VSCode.
-
 - Install the dependencies via the `requirements.txt` file using.
-
+- Active the environment
 ```commandline
-pip install -r requirements.txt
+source .venv/bin/activate
 ```
+
