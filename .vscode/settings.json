@@ -3,20 +3,13 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.testing.pytestArgs": [
-        "-v",
-        "--cov",
-        "--cov-report=xml",
-        "tests/"
-    ],
-    "python.testing.unittestEnabled": true,
-    "python.testing.pytestEnabled": false,
-    "python.testing.autoTestDiscoverOnSaveEnabled": true,
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./cdk",
+        "./cdk/python/tests/",
         "-p",
         "test*.py"
     ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }
