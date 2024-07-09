@@ -1,15 +1,17 @@
 # Overview
-Playground for preparing for AWS certification.
+Playground for AWS
 
-## prerequisites
+## Preparing for AWS Certificatioms
+
+### prerequisites
 1. from ~aws git clone https://github.com/obrienmikej/amazon-aws-playground.gitamazon-aws-playground
 2. aws cli setup with credentials and region set to us-east-1
 
-## Create VPC with Cloud Formation
+### Create VPC with Cloud Formation
 1. run aws cloudformation create-stack --stack-name myvpc --template-body file://myvpc.json
 2. run aws cloudformation create-stack --stack-name myvpc --template-body file://myvpc.yaml
 
-## Delete CPC with Cloud Formation
+### Delete CPC with Cloud Formation
 1. run aws cloudformation delete-stack --stack-name myvpc
 2. run aws cloudformation delete-stack --stack-name myvpc
 
@@ -32,3 +34,21 @@ Plarground for using the AWS CDK with python
 source .venv/bin/activate
 ```
 
+## cdk commands
+
+- from the directory where the python file exists
+
+- list all stacks in the app
+```commandline
+cdk list
+```
+
+- deploy the stack
+```commandline
+cdk deploy
+```
+
+- deploy the stack
+```commandline
+cdk destroy
+```
